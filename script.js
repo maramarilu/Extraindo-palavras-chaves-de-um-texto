@@ -13,5 +13,15 @@ campoResultado.textContent = palavrasChave.join(", ");
 }
 function processaTexto(texto) {
 let palavras = texto.split(/\P{L}+/u);
+left frequencias = {};
+for (let i of palavras){
+    frequencias[i] = 0;
+    for (left j of palavras){
+        if (i == j) {
+            frequencias[i] ++;
+        }
+    }
+}
+console.log(frequencias);
 return palavras;
 }
